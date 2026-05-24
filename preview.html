@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Preview - Smart Plant Disease Detection</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">🌾 SmartPlant</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="preview-section">
+    <h2>Uploaded Image Preview</h2>
+    <div id="previewContainer">
+      <img id="previewImage" alt="Preview" />
+    </div>
+    <div class="buttons">
+      <button onclick="window.location.href='index.html'">Upload Another</button>
+      <button id="detectBtn">Detect Disease</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    © 2025 Smart Plant Disease Detection | All Rights Reserved
+  </footer>
+
+  <script src="pw_script.js"></script>
+</body>
+</html>

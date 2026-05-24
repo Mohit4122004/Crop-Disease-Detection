@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Disease Detection Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f8f7;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 400px;
+    }
+    h1 {
+      color: #00796b;
+    }
+    p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #00796b;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🪴 Disease Detection Result</h1>
+    <p><strong>Disease:</strong> <span id="disease"></span></p>
+    <p><strong>Cure:</strong> <span id="cure"></span></p>
+    <button onclick="goBack()">🔙 Back</button>
+  </div>
+
+  <script>
+    // Retrieve stored result from localStorage
+    const disease = localStorage.getItem("detectedDisease");
+    const cure = localStorage.getItem("diseaseCure");
+
+    if (disease && cure) {
+      document.getElementById("disease").textContent = disease;
+      document.getElementById("cure").textContent = cure;
+    } else {
+      // If user opens result page directly
+      alert("No result found! Redirecting...");
+      window.location.href = "index.html";
+    }
+
+    function goBack() {
+      window.location.href = "preview.html"; // adjust if your preview page name differs
+    }
+  </script>
+</body>
+</html>
